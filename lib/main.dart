@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
 
   final List<Widget> pages = const [
-    Center(child: Text('Home Screen'),),
+    Center(child: Text('Home Screen')),
     Center(child: Text('Search Screen')),
     Center(child: Text('Profile Screen')),
   ];
@@ -156,9 +156,28 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(
             fontFamily: "Poppins",
             fontWeight: FontWeight.w500,
-            fontSize: 24
+            fontSize: 24,
           ),
         ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: Container(
+              height: 38,
+              width: 38,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white, width: 2)
+              ),
+              child: const CircleAvatar(
+                radius: 18,
+                backgroundImage: NetworkImage("https://od2-image-api.abs-cbn.com/prod/editorImage/17275087428851716362836028IMG_3967.webp"),
+                backgroundColor: Colors.transparent,
+              ),
+            ),
+          
+          ),
+        ],
       ),
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(

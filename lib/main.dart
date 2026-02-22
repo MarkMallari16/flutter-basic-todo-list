@@ -151,13 +151,28 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
-          "Welcome Back, Mark Mallari",
-          style: TextStyle(
-            fontFamily: "Poppins",
-            fontWeight: FontWeight.w500,
-            fontSize: 24,
-          ),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "Welcome Back, Mark Mallari",
+              style: TextStyle(
+                fontFamily: "Poppins",
+                fontWeight: FontWeight.w500,
+                fontSize: 18
+              ),
+            ),
+            SizedBox(height: 2),
+            Text(
+              "We're happy to see you again!",
+              style: TextStyle(
+                fontFamily: "Poppins",
+                fontSize: 12,
+                color: Colors.grey
+              ),
+            )
+          ],
         ),
         actions: [
           Padding(

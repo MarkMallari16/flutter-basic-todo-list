@@ -68,12 +68,14 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "Login",
+          "LOGIN",
           style: TextStyle(
-            fontFamily: "Poppins", fontWeight: FontWeight.w600,
-            fontSize: 24
+            fontFamily: "Poppins",
+            fontWeight: FontWeight.w800,
+            fontSize: 24,
           ),
         ),
+        backgroundColor: Colors.white12,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -90,9 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                   if (value == null || value.trim().isEmpty) {
                     return "Enter email";
                   }
-
                   if (!value.contains("@")) return "Enter valid email";
-
                   return null;
                 },
               ),
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
 
   final List<Widget> pages = const [
-    Center(child: Text('Home Screen')),
+    Center(child: Text('Home Screen'),),
     Center(child: Text('Search Screen')),
     Center(child: Text('Profile Screen')),
   ];
@@ -149,6 +149,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text(
+          "Welcome Back, Mark Mallari",
+          style: TextStyle(
+            fontFamily: "Poppins",
+            fontWeight: FontWeight.w500,
+            fontSize: 24
+          ),
+        ),
+      ),
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,

@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
               "Welcome Back, Mark Mallari",
               style: TextStyle(
                 fontFamily: "Poppins",
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
                 fontSize: 18
               ),
             ),
@@ -178,15 +178,15 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.only(right: 16),
             child: Container(
-              height: 38,
-              width: 38,
+              height: 40,
+              width: 40,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(color: Colors.white, width: 2)
               ),
               child: const CircleAvatar(
                 radius: 18,
-                backgroundImage: NetworkImage("https://od2-image-api.abs-cbn.com/prod/editorImage/17275087428851716362836028IMG_3967.webp"),
+                backgroundImage: NetworkImage("https://avatars.githubusercontent.com/u/104248911?v=4"),
                 backgroundColor: Colors.transparent,
               ),
             ),
